@@ -9,7 +9,7 @@ class ImageProvider:
 		if word in self.dicc.keys():
 			return self.dicc[word]
 		else:
-			return "imim_3_3.jpeg"
+			return "im_3.jpeg"
 
 	
 		
