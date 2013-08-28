@@ -12,11 +12,9 @@ app = Example(win)
 input_text = StringVar()
 prov = ImageProvider()
 
-entry = Entry(win, textvariable=input_text)
-entry.pack(fill='x', expand=True)
+entry = Text(win, height=3, highlightbackground="red")
+entry.pack(fill='x', expand=False, anchor = "n")
 
-output = Label(win)
-output.pack(fill='both', expand=True)
 
 def update_output(*args):
 	app.borrarHistorial()
@@ -24,7 +22,7 @@ def update_output(*args):
 	l = [prov.imageFor(i) for i in d]
 	for i in range(len(l)):
 		app.mostrarImagen(l[i],i)
-		output.config(text=l)
+		#output.config(text=l)
 
 input_text.trace_variable('w', update_output)
 win.mainloop()
