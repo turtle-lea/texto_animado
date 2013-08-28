@@ -4,6 +4,9 @@ from ejemplo import *
 from ttk import *
 
 win = Tk()
+w, h = win.winfo_screenwidth(), win.winfo_screenheight()
+win.geometry("%dx%d+0+0" % (w, h))
+
 win.title('TagCloud')
 app = Example(win)
 input_text = StringVar()
